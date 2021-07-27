@@ -1,0 +1,121 @@
+body, head {
+    background: -webkit-linear-gradient(90deg, #e6af68 10%, #f0cfaa 90%); /* Chrome 10+, Saf5.1+ */
+    background:    -moz-linear-gradient(90deg,#e6af68 10%, #f0cfaa 90%); /* FF3.6+ */
+    background:     -ms-linear-gradient(90deg, #e6af68 10%, #f0cfaa 90%); /* IE10 */
+    background:      -o-linear-gradient(90deg, #e6af68 10%, #f0cfaa 90%); /* Opera 11.10+ */
+    background:         linear-gradient(90deg, #e6af68 10%, #f0cfaa 90%); /* W3C */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.crossed {
+    color: gray;
+	text-decoration: line-through;
+}
+
+span {
+	background: #ff8800;
+	color: white;
+	width: 0;
+	transition: 0.3s ease;
+	opacity: 0;
+    float: left;
+}
+
+li:hover span {
+	width: 40px;
+    padding-top: 0px;
+	opacity: 1.0;
+}
+
+.divbox {
+    color: white;
+    text-align: center;
+    margin-top: 150px;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.headlabel {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+li:hover {
+    background-color: rgba(255, 205, 158, 0.589);
+}
+
+li {
+    font-family: Roboto;
+    opacity: 0;
+    animation: new-item-animation .3s linear forwards;
+    color: black;
+    background: rgba(255, 255, 255, 0.884);
+    border: 0px solid;
+    line-height: 40px;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+ul li:nth-child(odd) {
+    background: #dfdfdfd3;
+}
+
+ul li:nth-child(odd):hover {
+    background-color: rgba(255, 205, 158, 0.589);
+}
+
+.ulist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(85, 85, 85);
+    opacity: 1; /* Firefox */
+  }
+  
+
+.inp {
+    border: 2px solid rgb(0, 0, 0);
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight:300;
+    color: white;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    background-color: rgba(0,0,0,.15);
+}
+
+@keyframes new-item-animation {
+    from {
+        opacity: 0;
+        transform: translateY(-400px);
+}
+    to {
+        opacity: 1;
+        transform : translateY(0);
+    }
+}
+
+.inp:focus {
+    outline: none;
+}
